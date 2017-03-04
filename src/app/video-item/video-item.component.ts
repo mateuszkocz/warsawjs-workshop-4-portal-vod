@@ -13,7 +13,14 @@ export class VideoItemComponent {
   @Output()
   like = new EventEmitter<void>();
 
+  @Output()
+  watch = new EventEmitter<string>();
+
   likeVideo() {
     this.like.emit(null);
+  }
+
+  watchVideo() {
+    this.watch.emit(this.video.source);
   }
 }

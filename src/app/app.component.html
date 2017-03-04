@@ -1,6 +1,6 @@
-<app-modal [visible]="modalVisible" (close)="modalVisible = false">
-  Modal Content
+<app-modal [visible]="modalVisible" (close)="stopVideo()">
+  <video #video [src]="source" controls></video>
 </app-modal>
 <app-header></app-header>
-<app-videos-list></app-videos-list>
+<app-videos-list (watchVideo)="playVideo($event)"></app-videos-list>
 <app-footer></app-footer>

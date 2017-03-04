@@ -4,4 +4,5 @@ export interface Video {
   image: string;
   liked: boolean;
   rating: number;
+  source: string;
 }
