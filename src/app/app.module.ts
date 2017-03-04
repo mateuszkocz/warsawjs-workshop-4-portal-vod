@@ -12,6 +12,7 @@ import { VideoItemComponent } from './video-item/video-item.component';
 import { LogoComponent } from './logo/logo.component';
 import { FooterComponent } from './footer/footer.component';
 import {VideosService} from './videos.service';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {VideosService} from './videos.service';
     VideosListComponent,
     VideoItemComponent,
     LogoComponent,
-    FooterComponent
+    FooterComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
