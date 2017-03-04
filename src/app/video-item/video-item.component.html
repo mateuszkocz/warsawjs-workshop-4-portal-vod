@@ -1,8 +1,8 @@
 <md-card>
   <md-card-title-group>
     <md-card-title>{{ video.title }}</md-card-title>
-    <md-icon *ngIf="video.liked">favorite</md-icon>
-    <md-icon *ngIf="!video.liked">favorite_border</md-icon>
+    <md-icon *ngIf="video.liked" (click)="likeVideo()">favorite</md-icon>
+    <md-icon *ngIf="!video.liked" (click)="likeVideo()">favorite_border</md-icon>
   </md-card-title-group>
   <md-card-subtitle>{{ video.rating }} / 5</md-card-subtitle>
   <img md-card-image [src]="video.image">
@@ -13,7 +13,7 @@
     <button md-button>
       Watch Video
     </button>
-    <button md-button>
+    <button md-button (click)="likeVideo()">
       Like
     </button>
   </md-card-actions>

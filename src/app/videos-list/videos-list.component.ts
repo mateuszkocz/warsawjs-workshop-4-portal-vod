@@ -20,4 +20,12 @@ export class VideosListComponent implements OnInit {
     this.videos = this.videoService.videos;
     this.count = this.videoService.videos.map(videos => videos.length);
   }
+
+  toggleVideoLike(video: Video) {
+    if (video.liked) {
+      this.videoService.dislikeVideo(video.title);
+    } else {
+      this.videoService.likeVideo(video.title);
+    }
+  }
 }

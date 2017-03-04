@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Video} from '../Video';
 
 @Component({
@@ -9,4 +9,11 @@ import {Video} from '../Video';
 export class VideoItemComponent {
   @Input()
   video: Video;
+
+  @Output()
+  like = new EventEmitter<void>();
+
+  likeVideo() {
+    this.like.emit(null);
+  }
 }

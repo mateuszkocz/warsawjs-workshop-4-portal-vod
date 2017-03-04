@@ -1,6 +1,6 @@
 <md-grid-list cols="3" rowHeight="500px">
-  <md-grid-tile *ngFor="let video of videos | async; let index = index">
-    <app-video-item [video]="video"></app-video-item>
+  <md-grid-tile *ngFor="let video of videos | async">
+    <app-video-item [video]="video" (like)="toggleVideoLike(video)"></app-video-item>
   </md-grid-tile>
 </md-grid-list>
 
