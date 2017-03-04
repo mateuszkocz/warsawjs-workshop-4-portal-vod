@@ -11,6 +11,7 @@ import { VideosListComponent } from './videos-list/videos-list.component';
 import { VideoItemComponent } from './video-item/video-item.component';
 import { LogoComponent } from './logo/logo.component';
 import { FooterComponent } from './footer/footer.component';
+import {VideosService} from './videos.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { FooterComponent } from './footer/footer.component';
     HttpModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [VideosService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
