@@ -16,13 +16,25 @@ export class VideosService {
       {
         description: 'Description',
         title: 'Fast & Furious',
-        image: '/assets/warsawjs-logo.png',
+        image: 'https://unsplash.it/320/250?image=0',
         liked: false,
         rating: 5
       }, {
         description: 'Description',
         title: 'Slow & Lazy',
-        image: '/assets/warsawjs-logo.png',
+        image: 'https://unsplash.it/320/250?image=100',
+        liked: true,
+        rating: 2
+      }, {
+        description: 'Description',
+        title: 'Iron Man III',
+        image: 'https://unsplash.it/320/250?image=200',
+        liked: false,
+        rating: 2
+      }, {
+        description: 'Description',
+        title: 'Back to the future',
+        image: 'https://unsplash.it/320/250?image=300',
         liked: true,
         rating: 2
       }
@@ -33,12 +45,12 @@ export class VideosService {
 
     setTimeout(() => {
       this.items.next([...items, {
-        rating: 4,
-        liked: true,
-        description: 'Description',
-        title: 'Moderate & Active',
-        image: '/assets/warsawjs-logo.png'
       }]);
+          rating: 4,
+          liked: true,
+          description: 'Description',
+          title: 'Lion King',
+          image: 'https://unsplash.it/320/250?image=400'
     }, 5000);
   }
 

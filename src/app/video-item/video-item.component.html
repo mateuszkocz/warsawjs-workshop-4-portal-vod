@@ -1,1 +1,20 @@
-{{ video | json }}
+<md-card>
+  <md-card-title-group>
+    <md-card-title>{{ video.title }}</md-card-title>
+    <md-icon *ngIf="video.liked">favorite</md-icon>
+    <md-icon *ngIf="!video.liked">favorite_border</md-icon>
+  </md-card-title-group>
+  <md-card-subtitle>{{ video.rating }} / 5</md-card-subtitle>
+  <img md-card-image [src]="video.image">
+  <md-card-content>{{ video.description }}
+
+  </md-card-content>
+  <md-card-actions>
+    <button md-button>
+      Watch Video
+    </button>
+    <button md-button>
+      Like
+    </button>
+  </md-card-actions>
+</md-card>
