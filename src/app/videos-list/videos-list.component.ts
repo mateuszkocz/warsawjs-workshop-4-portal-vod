@@ -28,4 +28,8 @@ export class VideosListComponent implements OnInit {
       this.videoService.likeVideo(video.title);
     }
   }
+
+  trackFunction(index: number, video: Video) {
+    return video.title;
+  }
 }
