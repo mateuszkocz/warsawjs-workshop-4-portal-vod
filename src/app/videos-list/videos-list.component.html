@@ -1,1 +1,17 @@
-<app-video-item *ngFor="let video of videos; let index = index" [video]="video"></app-video-item>
+<p>Timer: {{ timer | async }}</p>
+<p>Every 5 sec: {{ every5sec | async }}</p>
+<p>Power: {{ powerTime | async }}</p>
+
+<h2>All</h2>
+<app-video-item *ngFor="let video of videos | async; let index = index" [video]="video"></app-video-item>
+<h2>Over 3</h2>
+<app-video-item *ngFor="let video of videosOver3 | async; let index = index" [video]="video"></app-video-item>
+<h2>Only if more than 2</h2>
+<app-video-item *ngFor="let video of videosIfMore | async; let index = index" [video]="video"></app-video-item>
+
+<p>Videos on the list: {{ count | async }}</p>
+<ul>
+  <li *ngFor="let element of ratingList | async">
+    {{ element.title }}: {{ element.rating }}
+  </li>
+</ul>
