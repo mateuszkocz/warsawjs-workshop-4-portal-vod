@@ -9,6 +9,8 @@ import {AppHeaderComponent} from './app-header/app-header.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { VideosListComponent } from './videos-list/videos-list.component';
 import { VideoItemComponent } from './video-item/video-item.component';
+import { LogoComponent } from './logo/logo.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { VideoItemComponent } from './video-item/video-item.component';
     AppHeaderComponent,
     SearchBarComponent,
     VideosListComponent,
-    VideoItemComponent
+    VideoItemComponent,
+    LogoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
