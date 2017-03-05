@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Video} from '../Video';
 import {VideosService} from '../videos.service';
 import {Observable} from 'rxjs/Observable';
@@ -12,6 +12,9 @@ export class VideosListComponent implements OnInit {
 
   videos: Observable<Video[]>;
   count: Observable<number>;
+
+  @Input()
+  searchTerm: string;
 
   @Output()
   watchVideo = new EventEmitter<string>();

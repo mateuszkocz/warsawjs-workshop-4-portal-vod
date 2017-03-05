@@ -1,5 +1,5 @@
 <md-grid-list cols="3" rowHeight="500px">
-  <md-grid-tile *ngFor="let video of videos | async; trackBy: trackFunction">
+  <md-grid-tile *ngFor="let video of videos | async | filter:searchTerm; trackBy: trackFunction">
     <app-video-item [video]="video" (like)="toggleVideoLike(video)" (watch)="openSource($event)"></app-video-item>
   </md-grid-tile>
 </md-grid-list>

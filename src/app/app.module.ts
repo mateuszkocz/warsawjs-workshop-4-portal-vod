@@ -13,6 +13,7 @@ import { LogoComponent } from './logo/logo.component';
 import { FooterComponent } from './footer/footer.component';
 import {VideosService} from './videos.service';
 import { ModalComponent } from './modal/modal.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ModalComponent } from './modal/modal.component';
     VideoItemComponent,
     LogoComponent,
     FooterComponent,
-    ModalComponent
+    ModalComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import {AfterViewInit, Component, ElementRef, Renderer, ViewChild} from '@angula
 export class AppComponent implements AfterViewInit {
   source: string;
   modalVisible = false;
+  searchTerm = '';
 
   @ViewChild('video')
   video: ElementRef;
